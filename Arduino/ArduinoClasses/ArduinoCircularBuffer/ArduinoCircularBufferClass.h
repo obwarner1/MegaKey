@@ -1,17 +1,18 @@
-#include <StandardCplusplus.h>
-#include <memory>
-//#include <mutex>
 
-using namespace std;
 
 template <class T>
 class ArduinoCircularBuffer {
 public:
     explicit ArduinoCircularBuffer(size_t size) :
-    buf_(std::unique_ptr<T[]>(new T[size])),
+    buf_(new T(size)),
     size_(size)
     {
         //empty constructor
+    }
+    
+    ~ArduinoCircularBuffer()
+    {
+        delete[] buf_;
     }
     
     
@@ -68,12 +69,12 @@ public:
     }
     
     T* getBuffer (void) {
-        return buf_.get();
+        return buf_;
     }
     
 private:
     //std::mutex mutex_;
-    std::unique_ptr<T[]> buf_;
+    T* buf_;
     size_t head_ = 0;
     size_t tail_ = 0;
     size_t size_;

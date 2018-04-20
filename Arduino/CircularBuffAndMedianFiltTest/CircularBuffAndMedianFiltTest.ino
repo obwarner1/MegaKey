@@ -1,11 +1,11 @@
 
 
-#include "/Users/andrewfyfe/Documents/Arduino/Classes/ArduinoCircularBuffer/ArduinoCircularBufferClass.h"
-#include "/Users/andrewfyfe/Documents/Arduino/Classes/ArduinoMedianFilter/ArduinoMedianFilter.h"
+#include "/Users/andrewfyfe/Documents/Arduino/ArduinoClasses/ArduinoCircularBuffer/ArduinoCircularBufferClass.h"
+#include "/Users/andrewfyfe/Documents/Arduino/ArduinoClasses/ArduinoMedianFilter/ArduinoMedianFilter.h"
 
 
 void setup() {
-  // put your setup code here, to run once:
+   //put your setup code here, to run once:
     Serial.begin(115200);
     ArduinoCircularBuffer<double> circle(10);
     Serial.println(circle.size());
