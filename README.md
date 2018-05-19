@@ -10,3 +10,6 @@ This single key featured a solenoid, a distance sensor and an accelerometer, and
 This year, the design was implemented over one octave (12 keys). This required a considerable downscaling in both the mechanical nature of the system as well as the system's power consumption. This was achieved through encapsulating the electronics within a compact wooden enclosure and implementing an extension spring system to account for a portion of the force feedback system. This removes the need for the solenoids to be operational at rest, reducing the overall power consumption of the keyboard. 
 
 The direction of the current, and therefore the pull or push of the solenoids, are software controlled, dependent on the position of the key in its trajectory. This is detected by infrared sensors placed underneath each individual key. The necessary information for the control system is obtained from the analysis of various keyboard responses, thus allowing the system to imitate the action of a grand piano, a harpsichord and organ to a high degree of accuracy.
+
+## Final Design
+![alt text](Arduino/MegaKeyImages/ThisYearsDesign.jpg)
